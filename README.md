@@ -86,14 +86,23 @@ communiquent en permanence avec le logiciel client, pour assurer de multiples fo
 le contrôle de la licence du logiciel et la gestion du planning à distance.<br>
 <br>
 Dans la suite de ce document, chacune de ces différentes parties sera développée.
+________________________________________________________________________________________________________________________________________________________________________________
 
   3. ## Architecture globale
-    ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/image.png)
-     
-    ## Architecture globale
-    
+   
+   ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/image.png)
+         
 3. ### Client
     1. Architecture
         ![architecture client](https://github.com/aminamaiga/GuideLine/blob/main/imageclient.png)
-5.                        
+
+Le cœur du logiciel, divisé en plusieurs modules, ne propose pas directement de fonctionnalités à
+l'utilisateur, mais fournit des services aux plugins.<br>
+Certains de ces plugins sont statiques. Ils fournissent à l'utilisateur les fonctionnalités essentielles du
+logiciel (la file de lecture ou les lecteurs audio par exemple). Ils sont indissociables du cœur du logiciel.<br>
+Au contraire, les plugins dynamiques fournissent des fonctionnalités supplémentaires qui n'intéresseront
+peut-être pas tous les utilisateurs.<br>
+Ils peuvent être (dé)chargés à la volée suivant les besoins, à l'aide du
+gestionnaire de plugins.
+Enfin, les plugins linguistiques sont des fichiers binaires contenant les traductions des éléments textuels.<br<
    
