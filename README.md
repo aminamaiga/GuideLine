@@ -92,7 +92,7 @@ ________________________________________________________________________________
    
    ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/image.png)
          
-3. ### Client
+### 3.1  Client
     1. Architecture
         ![architecture client](https://github.com/aminamaiga/GuideLine/blob/main/imageclient.png)
 
@@ -106,3 +106,52 @@ Ils peuvent être (dé)chargés à la volée suivant les besoins, à l'aide du
 gestionnaire de plugins.
 Enfin, les plugins linguistiques sont des fichiers binaires contenant les traductions des éléments textuels.<br<
    
+## 3.2 - Technologies utilisées
+Le logiciel client est codé en C++ et utilise le framework Qt de Nokia.<br>
+Qt fournit tous les éléments nécessaires à la réalisation de notre application, et apporte plusieurs<br>
+éléments essentiels :<br>
+
+   * La portabilité : un code Qt compile indifféremment sous les trois systèmes d'exploitation ciblés, à
+savoir Windows, Linux et Mac OS X.
+
+    * Soutenu par Nokia, Qt est utilisé dans des projets professionnels de grande envergure (tels KDE
+        ou Meego). Il est en développement perpétuel et possède une communauté active. Cela nous
+        assure la viabilité à long terme de ce framework.
+
+    * Nokia et Qt fournissent depuis peu de nouveaux modules Qt ciblés sur une utilisation mobile et
+            tactile. La version allégée du logiciel client utilise donc des technologies très récentes.
+            Parmi les nombreux éléments du framework Qt, certains sont particulièrement importants dans
+            l'architecture mise en place :
+
+   * Qt Plugins <br>
+        Nous utilisons l'API bas niveau de Qt permettant d'ajouter des fonctionnalités aux applications.
+        Ces plugins sont soit statiques, soit dynamiques (sous forme de bibliothèques dynamiques SO ou
+        DLL). Les plugins interagissent avec l'application via une interface C++.
+        Les Qt Plugins permettent ainsi à l'architecture d'être modulaire.
+  
+   * Qt Linguist
+Qt Linguist est un outil incorporé au framework Qt qui permet de créer facilement une application
+multilingue. Il permet en effet de séparer le texte affiché du code (via l'utilisation de clés). La
+traduction peut alors être effectuée séparément grâce à l'outil graphique fourni, puis rendu
+disponible via des fichiers binaires .qm. Ces binaires peuvent être chargés à la volée par
+l'application Qt.
+De plus, Qt peut détecter la langue du système de l'utilisateur et charger automatiquement le
+binaire .qm le plus adapté.
+   * Qt Mobility - Multimedia
+Qt Mobility – Multimedia est un add-on à Qt fournissant une interface de programmation
+permettant la lecture et l'enregistrement audio, la gestion de contenu multimédia (listes de
+lectures) et donnant un accès bas niveau aux flux audio, permettant ainsi leur modification pour
+appliquer des effets et des filtres. Les technologies hors-Qt utilisées sont relatives à la base de données.
+     * SQLite (via QtSQL)
+        SQLite a été choisi comme SGDB du logiciel client pour sa simplicité. En effet, cette application
+        ne sollicite qu'assez peu la base, et ne requiert pas d'opération complexe.
+        L'utilisation d'un SGDB plus complexe (utilisant par exemple une architecture client/serveur)
+        n'est pas nécessaire.
+        L'application accède à la base de données via le module QtSQL du framework Qt, qui fournit une
+        interface objet simple.
+## 3.3 Diagramme de classes
+
+        ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/image.png)
+
+
+     
