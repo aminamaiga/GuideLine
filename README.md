@@ -87,6 +87,11 @@ le contrôle de la licence du logiciel et la gestion du planning à distance.<br
 <br>
 Dans la suite de ce document, chacune de ces différentes parties sera développée.
 
-3. ## Architecture globale
+  3. ## Architecture globale
     ![archit](https://github.com/aminamaiga/GuideLine/blob/main/image.png)
+                        ### Architecture globale
+3. ### Client
+    1. Architecture
+       
+5.                        
    
