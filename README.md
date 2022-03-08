@@ -152,6 +152,30 @@ appliquer des effets et des filtres. Les technologies hors-Qt utilisées sont re
         
 ## 3.3 Diagramme de classes
 
-        ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/image.png)
+![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/diagramme.png)
+* Les `Core` fournissent les fonctionnalités de base du logiciel via une interface (IGuiCore pour le
+GuiCore par exemple). Chaque `Core` ou plugin est libre d’implémenter une ou plusieurs de ces
+interfaces pour exploiter les fonctionnalités du ou des `Core`.
+* De la même manière, les plugins statiques fournissent également une interface pouvant être
+implémentée par les autres plugins
 
-     
+## 3.3 Modèle de données
+ ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/diagramme.png)
+
+
+## 3.5 - Particularités de l'application allégée
+L'application allégée, directement connectée au logiciel client, propose à l'utilisateur des contrôles de
+base. Elle se comporte de la même manière que les plugins statiques. Cependant, elle n'interagit pas
+directement avec les CORES, mais seulement avec le TABLET API PLUGIN, qui fait office de passerelle
+entre les CORES et l'application allégée (voir le diagramme de l'application mobile).<br> <br>
+
+L'application allégée utilise une technologie particulière du framework Qt : QML.
+Le Qt Modeling Language est une technologie Qt récente qui permet de créer facilement (via une syntaxe
+Javascript) une interface graphique adaptée aux écrans tactiles. Cela permet de séparer facilement
+l'interface graphique du reste du code, idéal pour l'application allégée qui utilise en grande partie le code
+des plugins statiques, mais pas leur interface.
+
+   
+
+
+
