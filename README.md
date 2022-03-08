@@ -175,7 +175,10 @@ Javascript) une interface graphique adaptée aux écrans tactiles. Cela permet d
 l'interface graphique du reste du code, idéal pour l'application allégée qui utilise en grande partie le code
 des plugins statiques, mais pas leur interface.
 
-   
+________________________________________________________________________________________________________________________________________________________________________________
+  
+### 4.- Serveur
 
+  ## 4.1 Architecture
 
 
