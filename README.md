@@ -177,8 +177,36 @@ des plugins statiques, mais pas leur interface.
 
 ________________________________________________________________________________________________________________________________________________________________________________
   
-### 4.- Serveur
+### 4 Serveur
 
   ## 4.1 Architecture
+      ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/serveur.png)
+      
+      Le serveur fournit les fonctionnalités suivantes :
+        * Le site public de l'application ;
+        * L'interface d'administration en ligne ;
+        * Le service web qui communique avec le logiciel client.
+      
+  ## 4.2 Technologies utilisées
+
+           Le serveur est développé en langage Ruby grâce au framework Ruby on Rails. Il repose sur les
+            composants existants suivants : <br>
+            * Ruby (1.9+) ;
+            * Ruby on Rails (3.0+) ;
+            * Thin server (1.2+), le serveur web qui exécute notre application ;
+            * nginx (0.7+), proxy et load balancer ;
+            * PostgreSQL, serveur de base de données.
+            
+            Nous avons choisi le framework Ruby on Rails car c'est une technologie récente et agile, qui permet de
+            développer des application web de façon rapide et maintenable. De plus, c'est une technologie très suivie
+            et mise à jour régulièrement.<br>
+            Thin est l'un des serveurs compatibles avec Ruby on Rails les plus légers et rapides actuellement, il
+            convient parfaitement à nos besoins.<br>
+            
+            
+             Enfin nous avons choisi PostgreSQL comme serveur de base de données car il est très performant et
+             maintenu, mais Ruby on Rails supportant la quasi-totalité des serveurs de bases de données actuels, il
+             nous sera très facile d'en changer si nécessaire.
 
 
+ ##             
