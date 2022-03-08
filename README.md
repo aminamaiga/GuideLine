@@ -149,9 +149,9 @@ appliquer des effets et des filtres. Les technologies hors-Qt utilisées sont re
         n'est pas nécessaire.
         L'application accède à la base de données via le module QtSQL du framework Qt, qui fournit une
         interface objet simple.
+        
 ## 3.3 Diagramme de classes
 
         ![architecture globale](https://github.com/aminamaiga/GuideLine/blob/main/image.png)
-
 
      
