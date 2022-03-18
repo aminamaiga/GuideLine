@@ -209,4 +209,25 @@ ________________________________________________________________________________
              nous sera très facile d'en changer si nécessaire.
 
 
- ##             
+ ## 4.3 Interactions Extérieures            
+ 
+ ## 4.5 – API Client
+
+L'API client se situe entre le logiciel client et le service web. Sa fonction principale est de transmettre les
+informations de la radio sur le site web, de telle sorte que l'utilisateur puisse les modifier à distance.
+Cette API est privée et uniquement accessible par un client authentifié.
+C'est une API HTML RESTfull pouvant utiliser indifféremment XML ou Json comme format de données.
+Voici une liste rapide des actions possibles, avec leur URL RESTfull, les verbes HTTP utilisables et les
+formats servis.
+
+| URL | Verbes | Formats Servis | 
+|-----------|-----------|-----------|
+|/radios/nom-de-la-radio| GET POST| XML, JSON (Informations sur la radio)     
+
+## 4.6 – API Publique 
+
+## 5 Bug connus
+
+## Annexes
+
+    
